@@ -1,0 +1,335 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="ja" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>サービスメニュー | nico nail salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Bricolage+Grotesque:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;family=Syne:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff8f8",
+                        "secondary-container": "#bef100",
+                        "primary-fixed": "#ffd8e8",
+                        "on-secondary-fixed": "#161f00",
+                        "inverse-on-surface": "#ffecf2",
+                        "surface": "#fff8f8",
+                        "surface-container-high": "#fbe2eb",
+                        "primary": "#b0007a",
+                        "outline-variant": "#debecb",
+                        "on-tertiary-fixed-variant": "#374086",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#f5dce5",
+                        "on-surface": "#25181e",
+                        "on-primary-fixed": "#3d0027",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#25181e",
+                        "on-tertiary-fixed": "#05105a",
+                        "surface-container": "#ffe8f0",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#3b2c33",
+                        "surface-bright": "#fff8f8",
+                        "on-primary": "#ffffff",
+                        "outline": "#8a707b",
+                        "surface-tint": "#b5007d",
+                        "secondary-fixed-dim": "#a9d600",
+                        "surface-dim": "#ecd4dc",
+                        "tertiary": "#4d569d",
+                        "surface-container-low": "#fff0f4",
+                        "secondary-fixed": "#c1f500",
+                        "secondary": "#4f6600",
+                        "on-secondary-fixed-variant": "#3b4d00",
+                        "tertiary-container": "#666fb8",
+                        "on-surface-variant": "#57404a",
+                        "surface-variant": "#f5dce5",
+                        "primary-container": "#d42895",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#536b00",
+                        "on-primary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffafd5",
+                        "on-primary-fixed-variant": "#8a005f",
+                        "tertiary-fixed-dim": "#bcc2ff",
+                        "on-tertiary-container": "#fffbff",
+                        "inverse-primary": "#ffafd5",
+                        "tertiary-fixed": "#dfe0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Syne"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Syne"],
+                        "headline-sm": ["Bricolage Grotesque"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pop-shadow {
+            filter: drop-shadow(0 10px 15px rgba(225, 53, 160, 0.15));
+        }
+        .floating-flower {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        .bento-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px) scale(1.01);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="font-display-lg text-display-lg font-black text-primary dark:text-primary-fixed">nico nail salon</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">ホーム</a>
+<a class="font-body-lg text-body-lg text-primary font-bold border-b-2 border-primary pb-1 hover:scale-105 transition-transform duration-200" href="#">メニュー</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">店舗情報</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">ギャラリー</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 transition-all duration-300 active:translate-y-[-2px]">今すぐ予約</button>
+</div>
+<!-- Mobile Menu Toggle (Simplified) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap overflow-hidden relative">
+<!-- Floating Motifs -->
+<div class="absolute top-40 left-10 opacity-20 floating-flower pointer-events-none">
+<span class="material-symbols-outlined text-[80px] text-primary" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+</div>
+<div class="absolute bottom-20 right-10 opacity-20 floating-flower pointer-events-none" style="animation-delay: 2s;">
+<span class="material-symbols-outlined text-[120px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">mood</span>
+</div>
+<!-- Hero Title -->
+<div class="max-w-container-max mx-auto px-margin-desktop mb-16 text-center">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-4 block">EXPRESS YOURSELF</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6">サービスメニュー</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">日常を彩るこだわりのネイルサービスを、もっと身近に。リーズナブルで通いやすいプチプラ設定で、ポップで遊び心のあるデザインを気軽にお楽しみいただけます。</p>
+</div>
+<!-- Bento Service Grid -->
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Hand Gel Section -->
+<div class="md:col-span-8 space-y-gutter">
+<div class="bg-surface-container-low rounded-xl p-base md:p-10 bento-card border border-outline-variant/30">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: &quot;FILL&quot; 1; transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: rotate(0deg) scale(1);">back_hand</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">ハンドジェル</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Clear -->
+<div class="p-6 bg-white rounded-xl border border-outline-variant hover:border-primary transition-colors group">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm">クリアジェル</h3>
+<span class="font-headline-sm text-headline-sm text-secondary">¥3,300</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">自爪を保護し、美しく整える艶やかな仕上がり。清潔感のある指先を演出します。</p>
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-caps text-[10px]">ESSENTIAL</span>
+</div>
+<!-- One Color -->
+<div class="p-6 bg-white rounded-xl border border-outline-variant hover:border-primary transition-colors">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm">ワンカラー</h3>
+<span class="font-headline-sm text-headline-sm text-secondary">¥3,850</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">200色以上の高発色カラーからお選びいただけます。丁寧な甘皮ケア込み。</p>
+<span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full font-label-caps text-[10px]">VIBRANT</span>
+</div>
+<!-- Art Designs (Full Width Mobile, Col Span 2 Desktop) -->
+<div class="md:col-span-2 p-6 bg-primary-container text-on-primary-container rounded-xl pop-shadow relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm">アートデザイン</h3>
+<span class="font-headline-sm text-headline-sm text-secondary-container">¥5,500〜</span>
+</div>
+<p class="font-body-md text-body-md opacity-90 mb-6 max-w-lg">クロム、フラワーモチーフ、Y2Kチャーム、手描きイラストなど、お客様の理想を形にします。デザインのご相談もお気軽に！</p>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 transition-transform">ギャラリーを見る</button>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] opacity-10 rotate-12" style="font-variation-settings: 'FILL' 1;">palette</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Foot Gel Section -->
+<div class="md:col-span-4">
+<div class="h-full bg-surface-container rounded-xl p-8 bento-card border border-outline-variant/30 flex flex-col">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary" style="font-variation-settings: &quot;FILL&quot; 1; transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: rotate(0deg) scale(1);">footprint</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-secondary">フットジェル</h2>
+</div>
+<div class="space-y-6 flex-grow">
+<div class="p-6 bg-white rounded-xl border border-outline-variant">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm">スタンダードフットケア</h3>
+<span class="font-headline-sm text-headline-sm text-secondary">¥4,400</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">フットバス、角質ケア、ワンカラージェルのフルコース。</p>
+</div>
+<div class="p-6 bg-white rounded-xl border border-outline-variant">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm">アートフットケア</h3>
+<span class="font-headline-sm text-headline-sm text-secondary">¥6,600</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">スタンダードケアに、親指のアートまたはカラーブロックデザインを追加。</p>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/30">
+<img alt="美しいフットネイル" class="w-full h-48 object-cover rounded-xl" data-alt="A close-up, high-fashion photograph of perfectly manicured feet with vibrant neon pink gel polish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA8ZSGK7NfNXlD9v0fbwfDrILf4NCxM2m_RDo57KNXT7YKl4U8ufc8LM8c_Jfj2I7xaUeKPntZdoSWm_7OLdHh1GXJrMFOFofCZNheGMdqD2poVT0Hg7YegTnnxcPIzjw3-jMlk_9NGYCxuMsXpewX3lfe6xUmpPXyt8HhHVz3l-OrcI4pF9USraeza68ILtGZgzLwzmLZupHWRsDNcBJtNA6yzpUGS04MdTpZ55NKtx093GNfm5yD9Pgi3M0eqAapILuvBIN-X62Z">
+</div>
+</div>
+</div>
+<!-- Care & Repair Section (Full Width Bottom) -->
+<div class="md:col-span-12">
+<div class="bg-tertiary-fixed rounded-xl p-8 bento-card border border-outline-variant/30">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary" style="font-variation-settings: &quot;FILL&quot; 1; transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: rotate(0deg) scale(1);">health_and_safety</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-tertiary">ネイルケア＆リペア</h2>
+</div>
+<p class="font-body-md text-body-md text-on-tertiary-fixed-variant md:max-w-md">健康な爪は美しいアートの土台です。自爪の健康を保つための専門的なトリートメントを提供しています。</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-white/60 backdrop-blur-sm p-4 rounded-lg">
+<span class="font-label-caps text-label-caps text-tertiary block mb-2">CARE</span>
+<h4 class="font-headline-sm text-[20px] mb-1">集中ケア</h4>
+<p class="font-body-md text-[14px] text-on-surface-variant mb-4">ドライケアとオイルトリートメント。</p>
+<span class="font-headline-sm text-headline-sm text-primary">¥2,200</span>
+</div>
+<div class="bg-white/60 backdrop-blur-sm p-4 rounded-lg">
+<span class="font-label-caps text-label-caps text-tertiary block mb-2">REPAIR</span>
+<h4 class="font-headline-sm text-[20px] mb-1">ネイルラップ</h4>
+<p class="font-body-md text-[14px] text-on-surface-variant mb-4">亀裂の入った爪のシルク補強。</p>
+<span class="font-headline-sm text-headline-sm text-primary">¥550/本</span>
+</div>
+<div class="bg-white/60 backdrop-blur-sm p-4 rounded-lg">
+<span class="font-label-caps text-label-caps text-tertiary block mb-2">REPAIR</span>
+<h4 class="font-headline-sm text-[20px] mb-1">長さ出し</h4>
+<p class="font-body-md text-[14px] text-on-surface-variant mb-4">アクリルまたはジェルの長さ出し。</p>
+<span class="font-headline-sm text-headline-sm text-primary">¥770/本</span>
+</div>
+<div class="bg-white/60 backdrop-blur-sm p-4 rounded-lg">
+<span class="font-label-caps text-label-caps text-tertiary block mb-2">REMOVAL</span>
+<h4 class="font-headline-sm text-[20px] mb-1">オフのみ</h4>
+<p class="font-body-md text-[14px] text-on-surface-variant mb-4">自爪を傷めない丁寧な除去。</p>
+<span class="font-headline-sm text-headline-sm text-primary">¥3,000</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<section class="mt-section-gap max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-surface-container-highest rounded-2xl p-12 text-center relative overflow-hidden border-2 border-primary/10">
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg text-primary mb-6">理想の指先へ。</h2>
+<p class="font-body-lg text-body-lg mb-8 max-w-xl mx-auto">ご予約が埋まりやすくなっております。お早めに予約を確定して、特別なネイル体験を。</p>
+<div class="flex flex-col sm:flex-row justify-center gap-gutter">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline-sm hover:scale-105 transition-all pop-shadow">予約する</button>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-10 py-4 rounded-full font-headline-sm hover:scale-105 transition-all">ギフトカード</button>
+</div>
+</div>
+<!-- Decorative Elements -->
+<span class="material-symbols-outlined absolute top-4 left-4 text-[100px] text-primary/5" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-[100px] text-secondary/5" style="font-variation-settings: 'FILL' 1;">heart_broken</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container dark:bg-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">nico nail salon</div>
+<p class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant">自分らしく、楽しむ。毎日を彩るネイルを提案するプライベートサロン。</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-primary mb-2">リンク</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">よくある質問</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">プライバシーポリシー</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">利用規約</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-primary mb-2">SNS</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span> Instagram
+            </a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">push_pin</span> Pinterest
+            </a>
+</div>
+<div class="md:col-span-3 pt-12 mt-12 border-t border-outline-variant/30 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">© 2024 nico nail salon. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+    // Micro-interactions
+    document.querySelectorAll('.bento-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            const icon = card.querySelector('.material-symbols-outlined');
+            if (icon) {
+                icon.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                icon.style.transform = 'rotate(15deg) scale(1.1)';
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            const icon = card.querySelector('.material-symbols-outlined');
+            if (icon) {
+                icon.style.transform = 'rotate(0deg) scale(1)';
+            }
+        });
+    });
+</script>
+
+
+
+
+</body></html>

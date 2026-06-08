@@ -1,0 +1,347 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="ja"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gallery - nico nail salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;family=Bricolage+Grotesque:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;family=Syne:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff8f8",
+                        "secondary-container": "#bef100",
+                        "primary-fixed": "#ffd8e8",
+                        "on-secondary-fixed": "#161f00",
+                        "inverse-on-surface": "#ffecf2",
+                        "surface": "#fff8f8",
+                        "surface-container-high": "#fbe2eb",
+                        "primary": "#b0007a",
+                        "outline-variant": "#debecb",
+                        "on-tertiary-fixed-variant": "#374086",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#f5dce5",
+                        "on-surface": "#25181e",
+                        "on-primary-fixed": "#3d0027",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#25181e",
+                        "on-tertiary-fixed": "#05105a",
+                        "surface-container": "#ffe8f0",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#3b2c33",
+                        "surface-bright": "#fff8f8",
+                        "on-primary": "#ffffff",
+                        "outline": "#8a707b",
+                        "surface-tint": "#b5007d",
+                        "secondary-fixed-dim": "#a9d600",
+                        "surface-dim": "#ecd4dc",
+                        "tertiary": "#4d569d",
+                        "surface-container-low": "#fff0f4",
+                        "secondary-fixed": "#c1f500",
+                        "secondary": "#4f6600",
+                        "on-secondary-fixed-variant": "#3b4d00",
+                        "tertiary-container": "#666fb8",
+                        "on-surface-variant": "#57404a",
+                        "surface-variant": "#f5dce5",
+                        "primary-container": "#d42895",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#536b00",
+                        "on-primary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffafd5",
+                        "on-primary-fixed-variant": "#8a005f",
+                        "tertiary-fixed-dim": "#bcc2ff",
+                        "on-tertiary-container": "#fffbff",
+                        "inverse-primary": "#ffafd5",
+                        "tertiary-fixed": "#dfe0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Syne"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Syne"],
+                        "headline-sm": ["Bricolage Grotesque"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, #ffd8e8 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(168, 177, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="font-display-lg text-display-lg font-black text-primary dark:text-primary-fixed">
+                nico nail salon
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">ホーム</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">メニュー</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">店舗情報</a>
+<a class="font-body-lg text-body-lg text-primary font-bold border-b-2 border-primary pb-1 hover:scale-105 transition-transform duration-200" href="#">ギャラリー</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold hover:scale-105 active:translate-y-[-2px] transition-all duration-300">
+                予約する
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap bg-pattern">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 text-secondary-container/30 rotate-12 pointer-events-none">
+<span class="material-symbols-outlined !text-[120px]" style="font-variation-settings: 'FILL' 1;">mood</span>
+</div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 text-primary-fixed/30 -rotate-12 pointer-events-none">
+<span class="material-symbols-outlined !text-[120px]" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-label-caps text-primary mb-4">OUR CREATIONS</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">指先に、アートの魔法を</h1>
+<p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">厳選されたカスタムネイルアートのコレクション。低価格でもクオリティは妥協せず、ミニマルから大胆なデザインまで、あなたの理想を形にします。</p>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+<div class="flex flex-wrap justify-center gap-3">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold shadow-md shadow-primary/20 hover:scale-105 transition-transform">すべて</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant font-semibold border border-outline-variant hover:bg-surface-container-high hover:scale-105 transition-all">季節のデザイン</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant font-semibold border border-outline-variant hover:bg-surface-container-high hover:scale-105 transition-all">シンプル</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant font-semibold border border-outline-variant hover:bg-surface-container-high hover:scale-105 transition-all">ゴージャス</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant font-semibold border border-outline-variant hover:bg-surface-container-high hover:scale-105 transition-all">ニュアンス</button>
+</div>
+</section>
+<!-- Gallery Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="masonry-grid">
+<!-- Gallery Item 1 -->
+<div class="masonry-item group cursor-pointer">
+<div class="glass-card rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(176,0,122,0.15)]">
+<div class="relative overflow-hidden aspect-[3/4]">
+<img alt="Morning Dew Florals" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANUO9oce9rBRA0Zt0aisyZoGcOgbqwXZ4rYPPDD-rsml0PyADl48iGsrBzEiweJvG4Exnfr8gYPvoT22wO09uc4Ta55gjpH1oEBKm3wUV8hjZsGxuXtXtiQSicNM8jHFikOLPCrmueoCEKvlRdMiO_t-EP8jmcLcPgCPMCCZTpuZVW_LmOJcl64fEMyDPPqdlTavGh_wqcQS6NYxh1glLG8UR5sxQpgdB92o8JyTiTl46hEw90xl7UYGIDf0ccMOYeoIlC4MFmNTLV">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">ニュアンス</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">朝露のフラワーネイル</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">ソフトピンクのベースに手描きで繊細なお花をあしらいました。</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="masonry-item group cursor-pointer">
+<div class="glass-card rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(176,0,122,0.15)]">
+<div class="relative overflow-hidden aspect-square">
+<img alt="Lime Smile Pop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKOQcgMgZUkglNFRX0bP_v7DFg7gUM-9bUHBHN4AgRa5GIFiMVCofdLdhHc0gbl1KIH4dP2Sagx767QrX9HXxkYgSwW2kI2o2nZFnosMzs1AbJOm_KQHMU_Y4pQFC3lOgpjaUGipoSy6XXebRekyPF4y_vAz8AXPqCaNWAS___2j8fR1Ee46CmzZmuIIrLnuVnjlHlX3AVAHmpohvo7Q_26heHSIW45_EPP_VNuF3Of9W6UHY4T4VbhmFuW-q8maZhnZHKMn1O0JIm">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">シンプル</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">ライムスマイル・ポップ</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Y2Kにインスパイアされたネオンチップとスマイルのアクセント。</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="masonry-item group cursor-pointer">
+<div class="glass-card rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(176,0,122,0.15)]">
+<div class="relative overflow-hidden aspect-[4/5]">
+<img alt="Midnight Magenta Marbling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8UcF57MZp7UhmpLd_0CXYkHQ7LPUl4herjqp5eo4rR8xHERuYqWbjrYzkztmO7b-WKt2kkH9GzxmswZ8tXmHi7i2jneHqCzIUAD8kqFZlDROWEasIZoY3Dja0EYgEjjbjGwpvwVXcb-SRKGFLz8ifMG03Eit-CTheAmBE63MQKhhwhsvUZM3ADqnUivdxAdxFe_jBZve3OcNB5DJ7iqn9Mzg5FpqtrFYgiTFncKcQTt7qY1gbmt6cvS8b9Wx3ukDihHaQ1UeZ1x9I">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">ゴージャス</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">真夜中のマゼンタマーブル</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">本物の金箔を使用した洗練されたマーブルデザイン。</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 4 -->
+<div class="masonry-item group cursor-pointer">
+<div class="glass-card rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(176,0,122,0.15)]">
+<div class="relative overflow-hidden aspect-[3/2]">
+<img alt="Citrus Sorbet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXpus2E5C42pOWBt84yc1tzqszxB6wCSurkDo8b4qiPnv8nzTK9eyOauwKvJuXasroO-tMYbiayOC9qqRjm6HDBq5-7lK04fiOkXNq86V03Aht5RhipeNbx7SQNQEVp2SVhpcHu9fizY1BeRrkeMdO3dgmGBktYP3fduVFsB_vYmuC3o94pE-FUB3FO1Eneu2PWDPIqyhyT1uXGYhEsVo12QXzPIsPKGgEDXeNI7qp_pLkMdSPLkucF-T_n9v0XFr8as5UOpE_c_YL">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">季節のデザイン</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">シトラスシャーベット</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">夏にぴったりの、リフレッシュできるフルーツアート。</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 5 -->
+<div class="masonry-item group cursor-pointer">
+<div class="glass-card rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(176,0,122,0.15)]">
+<div class="relative overflow-hidden aspect-square">
+<img alt="Holographic Prism" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkFrxJ41u_AqNVds9Tlv2my3PJP0_e_c-hZi14TZUHquplcgAmoMQrlbXo37-eISSTD-3hGFu5gBpgxtRwxvnP9ww23s3s9seAVDOQJS1m2pLcVsZ4IFlsG2oFqR06BPcD51Bdsyw4iWQY97ngQEZ46Dup0RXYjwpgmN2PDNeTDr8BuKPgSyF2afVUHJ-BPn5cydp9ETZotVHYDoyEujsnf1L_DQm87C_saMEdT6ww6Z04tGQgS143WEXbaA1q3eWnyFozyLtbDTt-">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">ニュアンス</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">ホログラフィック・プリズム</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">クリーンなミルキーベースに、繊細な虹色の輝きをプラス。</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 6 -->
+<div class="masonry-item group cursor-pointer">
+<div class="glass-card rounded-xl overflow-hidden transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(176,0,122,0.15)]">
+<div class="relative overflow-hidden aspect-[4/5]">
+<img alt="Pastel Dreamland" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOQF1NlYNbQwfE9PWeNOx166udcRWphhnqqQ80JRKqF2BfMKZHopUcf-GuYGuZLO6YB2xb-WDWunja3RqkKOBhCU7kc7jHOCf7u7mmizrkPoXLOKzXj38Zf98h-Qzsi0WA6c63ub9qliKpRj32UfvPIImXvgpv6K56wvX-tYI0mfSAXz6K-iIPFdrTnE26X6P-zUPf2Lc3WvGjCzZffyoSASMi_DQIlDDQj7JdlJic1Qkeo1BbyCPHkG3Sw6IL3QTdbAaz5HrTjaZ_">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">ゴージャス</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">パステル・ドリームランド</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">マルチカラーのパステルパレットと3Dハートチャーム。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-secondary-container rounded-3xl p-12 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md text-on-secondary-fixed mb-6">デザインにインスピレーションを感じましたか？</h2>
+<p class="font-body-lg text-body-lg text-on-secondary-fixed-variant mb-10 max-w-lg mx-auto">今すぐ予約して、私たちのアーティストと一緒にあなただけの特別なデザインを作りましょう。</p>
+<button class="bg-primary text-on-primary font-bold text-body-lg px-12 py-4 rounded-full shadow-lg hover:translate-y-[-4px] transition-all">
+                        空き状況を確認する
+                    </button>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 p-8 opacity-20 rotate-12">
+<span class="material-symbols-outlined !text-[100px]">auto_awesome</span>
+</div>
+<div class="absolute bottom-0 left-0 p-8 opacity-20 -rotate-12">
+<span class="material-symbols-outlined !text-[100px]">brush</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container dark:bg-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                    nico nail salon
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant max-w-xs">
+                    遊び心あふれる、エネルギッシュでプロフェッショナルなネイルアートを提供します。指先で自己表現を。
+                </p>
+<p class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant mt-4">
+                    © 2024 nico nail salon. All rights reserved.
+                </p>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps text-primary">クイックリンク</h4>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">よくある質問</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">利用規約</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">プライバシーポリシー</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps text-primary">SNSをフォロー</h4>
+<div class="flex gap-6">
+<a class="group" href="#">
+<span class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors">Instagram</span>
+</a>
+<a class="group" href="#">
+<span class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors">Pinterest</span>
+</a>
+</div>
+<div class="mt-4 p-4 rounded-xl bg-surface-container-low dark:bg-surface-container-high border border-outline-variant/30">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2">所在地</p>
+<p class="font-body-md text-body-md text-on-surface">東京都 123 Kawaii Lane</p>
+<p class="font-body-md text-body-md text-on-surface">営業時間 10:00 - 20:00 (年中無休)</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for gallery items
+        document.querySelectorAll('.masonry-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                // Potential for more complex JS animations
+            });
+        });
+
+        // Simple filter logic simulation (UI only)
+        const filterButtons = document.querySelectorAll('button.rounded-full');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary', 'shadow-md', 'shadow-primary/20');
+                    b.classList.add('bg-white', 'text-on-surface-variant', 'border', 'border-outline-variant');
+                });
+                btn.classList.add('bg-primary', 'text-on-primary', 'shadow-md', 'shadow-primary/20');
+                btn.classList.remove('bg-white', 'text-on-surface-variant', 'border', 'border-outline-variant');
+            });
+        });
+    </script>
+
+
+</body></html>

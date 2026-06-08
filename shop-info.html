@@ -1,0 +1,358 @@
+<!DOCTYPE html><html class="light" lang="ja" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Shop Info | nico nail salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Bricolage+Grotesque:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;family=Syne:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fff8f8",
+                    "secondary-container": "#bef100",
+                    "primary-fixed": "#ffd8e8",
+                    "on-secondary-fixed": "#161f00",
+                    "inverse-on-surface": "#ffecf2",
+                    "surface": "#fff8f8",
+                    "surface-container-high": "#fbe2eb",
+                    "primary": "#b0007a",
+                    "outline-variant": "#debecb",
+                    "on-tertiary-fixed-variant": "#374086",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#f5dce5",
+                    "on-surface": "#25181e",
+                    "on-primary-fixed": "#3d0027",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#25181e",
+                    "on-tertiary-fixed": "#05105a",
+                    "surface-container": "#ffe8f0",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#3b2c33",
+                    "surface-bright": "#fff8f8",
+                    "on-primary": "#ffffff",
+                    "outline": "#8a707b",
+                    "surface-tint": "#b5007d",
+                    "secondary-fixed-dim": "#a9d600",
+                    "surface-dim": "#ecd4dc",
+                    "tertiary": "#4d569d",
+                    "surface-container-low": "#fff0f4",
+                    "secondary-fixed": "#c1f500",
+                    "secondary": "#4f6600",
+                    "on-secondary-fixed-variant": "#3b4d00",
+                    "tertiary-container": "#666fb8",
+                    "on-surface-variant": "#57404a",
+                    "surface-variant": "#f5dce5",
+                    "primary-container": "#d42895",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#536b00",
+                    "on-primary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#ffafd5",
+                    "on-primary-fixed-variant": "#8a005f",
+                    "tertiary-fixed-dim": "#bcc2ff",
+                    "on-tertiary-container": "#fffbff",
+                    "inverse-primary": "#ffafd5",
+                    "tertiary-fixed": "#dfe0ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Syne"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Syne"],
+                    "headline-sm": ["Bricolage Grotesque"],
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Bricolage Grotesque"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#d42895 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
+<div class="font-display-lg text-display-lg font-black text-primary dark:text-primary-fixed">nico nail salon</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Home</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Menu</a>
+<a class="font-body-lg text-body-lg text-primary font-bold border-b-2 border-primary pb-1 hover:scale-105 transition-transform duration-200" href="#">Shop Info</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Gallery</a>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all hover-lift">Book Now</button>
+</div>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Page Header -->
+<header class="mb-section-gap">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">店舗情報</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">ピンクに彩られた特別な空間へ。クリエイティブ地区の中心に位置するnico nail salonは、アートとセルフケアが融合する場所です。</p>
+</header>
+<!-- Bento Layout for Core Info -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap">
+<!-- Contact Card -->
+<div class="md:col-span-4 bg-surface-container-low p-base md:p-8 rounded-xl border border-outline-variant/30 flex flex-col justify-between hover-lift transition-transform duration-300">
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">call</span>
+<span class="font-label-caps text-label-caps text-primary uppercase">お問い合わせ</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-2">ご予約・ご相談</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">理想のネイルを叶えませんか？当日予約も大歓迎！お買い物ついでに、お電話またはオンラインにてお気軽にご相談ください。</p>
+</div>
+<div class="space-y-4">
+<a class="block bg-surface p-4 rounded-lg font-headline-sm text-headline-sm text-center border border-outline-variant hover:border-primary transition-colors" href="tel:+1234567890">
+                            (555) 123-4567
+                        </a>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-headline-sm text-headline-sm hover:bg-primary-container transition-all">
+                            オンライン予約
+                        </button>
+</div>
+</div>
+<!-- Hours Card -->
+<div class="md:col-span-8 bg-surface-container-high p-base md:p-8 rounded-xl border border-outline-variant/30 hover-lift transition-transform duration-300 relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="font-label-caps text-label-caps text-tertiary uppercase">営業時間</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
+<div class="flex justify-between border-b border-outline-variant/50 pb-2">
+<span class="font-body-lg text-body-lg font-bold">月曜日</span>
+<span class="font-body-lg text-body-lg">10:00 - 19:00</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/50 pb-2">
+<span class="font-body-lg text-body-lg font-bold">火曜日</span>
+<span class="font-body-lg text-body-lg">10:00 - 19:00</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/50 pb-2">
+<span class="font-body-lg text-body-lg font-bold">水曜日</span>
+<span class="font-body-lg text-body-lg text-error">定休日</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/50 pb-2">
+<span class="font-body-lg text-body-lg font-bold">木曜日</span>
+<span class="font-body-lg text-body-lg">10:00 - 20:00</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/50 pb-2">
+<span class="font-body-lg text-body-lg font-bold">金曜日</span>
+<span class="font-body-lg text-body-lg">10:00 - 20:00</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/50 pb-2">
+<span class="font-body-lg text-body-lg font-bold">土曜日</span>
+<span class="font-body-lg text-body-lg">09:00 - 18:00</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/50 pb-2">
+<span class="font-body-lg text-body-lg font-bold">日曜日</span>
+<span class="font-body-lg text-body-lg">11:00 - 17:00</span>
+</div>
+</div>
+<div class="mt-8 p-4 bg-error-container rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-error">info</span>
+<p class="font-body-md text-body-md text-on-error-container">冬季休業のお知らせ：12月24日から1月2日までお休みをいただきます。</p>
+</div>
+</div>
+<!-- Floral Motif Decor -->
+<div class="absolute -right-8 -bottom-8 opacity-10">
+<span class="material-symbols-outlined text-[160px] text-tertiary">filter_vintage</span>
+</div>
+</div>
+</div>
+<!-- Access & Map Section -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">アクセス</span>
+</div>
+<h2 class="font-headline-md text-headline-md">志布志のピンクのオアシス</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">鹿児島県志布志市志布志町志布志2-1-16</p>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="bg-secondary-fixed text-on-secondary-fixed p-2 rounded-full h-fit">
+<span class="material-symbols-outlined">directions_bus</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-bold">バスでお越しの方</p>
+<p class="font-body-md text-body-md text-on-surface-variant">42番・101番系統 – Art Center St.停留所すぐ</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-primary-fixed text-on-primary-fixed p-2 rounded-full h-fit">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-bold">駐車場</p>
+<p class="font-body-md text-body-md text-on-surface-variant">近隣にコインパーキングあり。週末はバレーパーキングもご利用いただけます。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 h-[400px] bg-surface-container-highest rounded-3xl overflow-hidden relative shadow-inner">
+<img alt="アクセスマップ" class="w-full h-full object-cover grayscale opacity-50" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhQb61oeTrsliTtLvugkM4saiiJBZHSrFc0PoW7NwooCM1FLE_0MNM2eItRFFNrtHm1uEQZiUK0_VI--MF4wqNC6hp5J7fEInjlpgNLxkonOqfkacqqG6wQECUG3ftA5nYnhAtmESM_e-6skR2lfLJbNN5LIzLK7NKHDsqrtRmB5Yu8M1t3SqbRd6Zxr98OAqC4zqHJHWEinN-U5XKROjFH2GGRDDNCe1qEaS8GG7xPiKBTlflALlH5uDrmm0XqS9lsRveEYS4GGCx">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary text-white p-6 rounded-full shadow-lg animate-bounce">
+<span class="material-symbols-outlined scale-150">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm p-4 rounded-xl border border-outline-variant shadow-sm">
+<a class="font-body-md text-body-md font-bold text-primary flex items-center gap-2" href="#">
+                                Googleマップで開く <span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Staff Introduction -->
+<section class="bg-surface-container-lowest rounded-[40px] p-base md:p-12 relative overflow-hidden border border-outline-variant/20">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-4 block">クリエイティブクルー</span>
+<h2 class="font-headline-md text-headline-md mb-4">ネイリスト紹介</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">個性豊かなメンバーが、あなたの指先に魔法をかけます。私たちが提供するのは、単なるネイルケア以上の感動です。</p>
+</div>
+<div class="grid grid-cols-1 gap-gutter md:grid-cols-2">
+<!-- Staff 1 -->
+<div class="group text-center">
+<div class="relative mb-6 mx-auto w-48 h-48">
+<div class="absolute inset-0 bg-primary-fixed rounded-[3rem] rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
+<img class="absolute inset-0 w-full h-full object-cover rounded-[3rem] -rotate-3 group-hover:rotate-0 transition-transform duration-500" data-alt="Portrait of a young woman with pink dyed hair and professional nail art tools in her hand, posing in a bright and airy salon environment with pop-art style flowers in the background. The lighting is soft and flattering, emphasizing her creative and welcoming personality. The aesthetic is high-energy Y2K modern with a vibrant palette of pinks and lime greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0XpKbCLjTQbp5ZiI67gRYP2akVLqMwGnvDLuqDW6rNuef43Gw5RyZRYexxZrJ_iOTi_np1rmcc3OpT6zVK0iMZcGAPoL-bk9OMeswLsNg5vDRFXJplIFU67f-mFf16mcD4OmuvV-JJgjN4W3pg0rP17xBZ7DElKBxGnA9CfcB8zKGRictpHP90DM769qThpEjE7rOv-Lso8a5H6DdX2uxv2SfW_WI-xnlMPhUGexMZJhtNNZpN4dBUdiDT7gmCbBnHO-Atb64Otnv">
+</div>
+<h3 class="font-headline-sm text-headline-sm">Kaoru</h3>
+<p class="font-label-caps text-label-caps text-primary mb-2">オーナー・マスターネイリスト</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">「初めての方も大歓迎です！あなたの『なりたい』を一緒に見つけましょう。おしゃべりも楽しみにお待ちしています！」</p>
+</div>
+<!-- Staff 2 -->
+<div class="group text-center">
+<div class="relative mb-6 mx-auto w-48 h-48">
+<div class="absolute inset-0 bg-secondary-fixed rounded-full -rotate-6 group-hover:rotate-0 transition-transform duration-500"></div>
+<img class="absolute inset-0 w-full h-full object-cover rounded-full rotate-3 group-hover:rotate-0 transition-transform duration-500" data-alt="A professional nail artist with stylish braids and vibrant colorful makeup, smiling warmly at the camera. She is wearing a trendy lime green apron in a modern pop-style nail salon featuring soft lavender accents and bright pink floral wall decals. The mood is joyful and artistic, captured in high-key natural lighting that highlights her professional yet playful character." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfkDRCwGIr3GC9J5fuaumb0AxmIECEwocoDseOYv609wnk0R6zoPlNPsrsuONBvHZcpS7cczX3MoLHDtWeBSIGqjGBraqm8Nr9YWKSSnHf8fBy93MNQ1jVr7MTx7oR1SpCp_8c3OQryl5hQzHOthGmfkIKyczZq4evwByscvptzwl40H8SEmTWs4n9HACF_Q5qfcPLfiapTHp5sJ818zP2UtJsFNSNXq79yp8rlLLmkkAVtvbl6mBTgA-C08IL1-e6gOW1bRU9SGgH">
+</div>
+<h3 class="font-headline-sm text-headline-sm">Maki</h3>
+<p class="font-label-caps text-label-caps text-secondary mb-2">ネイリスト</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">「こだわり派の方も、ノープランの方も大歓迎！『こんな感じが好き』というイメージを形にするのが得意です。」</p>
+</div>
+<!-- Staff 3 -->
+
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container dark:bg-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">nico nail salon</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant max-w-xs">大胆で美しいあなたのための、エネルギッシュなネイルアート。手元からハッピーを届けます。</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mood</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">favorite</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">local_florist</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface">リンク</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">プライバシーポリシー</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">利用規約</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">よくある質問</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">Instagram</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:underline decoration-secondary-container decoration-2" href="#">Pinterest</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface">ニュースレター</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">ネイルのインスピレーションやお得な情報をいち早くお届けします。</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-low border-2 border-outline-variant rounded-lg px-4 py-2 focus:border-primary outline-none transition-all font-body-md" placeholder="メールアドレス" type="email">
+<button class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-lg font-label-caps hover:scale-105 transition-transform">登録</button>
+</div>
+<div class="pt-8">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">© 2024 nico nail salon. All rights reserved.</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive Atmosphere: Floating Smiley Faces -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden opacity-20" id="atmosphere"><span class="material-symbols-outlined absolute" style="color: rgb(77, 86, 157); font-size: 37px; left: 69.4671vw; top: 56.2722vh; opacity: 0.587328;">star</span><span class="material-symbols-outlined absolute" style="color: rgb(190, 241, 0); font-size: 54px; left: 81.6894vw; top: 9.6255vh; opacity: 0.535775;">mood</span><span class="material-symbols-outlined absolute" style="color: rgb(77, 86, 157); font-size: 27px; left: 11.6369vw; top: 17.2282vh; opacity: 0.26144;">filter_vintage</span><span class="material-symbols-outlined absolute" style="color: rgb(176, 0, 122); font-size: 28px; left: 82.4072vw; top: 80.7225vh; opacity: 0.276928;">star</span><span class="material-symbols-outlined absolute" style="color: rgb(190, 241, 0); font-size: 31px; left: 20.6375vw; top: 28.467vh; opacity: 0.470783;">filter_vintage</span><span class="material-symbols-outlined absolute" style="color: rgb(190, 241, 0); font-size: 57px; left: 83.518vw; top: 9.55346vh; opacity: 0.529482;">filter_vintage</span><span class="material-symbols-outlined absolute" style="color: rgb(176, 0, 122); font-size: 58px; left: 0.0108705vw; top: 20.5895vh; opacity: 0.395983;">mood</span><span class="material-symbols-outlined absolute" style="color: rgb(176, 0, 122); font-size: 41px; left: 77.4346vw; top: 38.9235vh; opacity: 0.448084;">filter_vintage</span><span class="material-symbols-outlined absolute" style="color: rgb(176, 0, 122); font-size: 41px; left: 67.3962vw; top: 90.717vh; opacity: 0.445804;">mood</span><span class="material-symbols-outlined absolute" style="color: rgb(176, 0, 122); font-size: 25px; left: 88.9689vw; top: 49.138vh; opacity: 0.306581;">mood</span><span class="material-symbols-outlined absolute" style="color: rgb(176, 0, 122); font-size: 42px; left: 9.06414vw; top: 25.3266vh; opacity: 0.50649;">mood</span><span class="material-symbols-outlined absolute" style="color: rgb(190, 241, 0); font-size: 35px; left: 19.7504vw; top: 48.8894vh; opacity: 0.262438;">filter_vintage</span><span class="material-symbols-outlined absolute" style="color: rgb(176, 0, 122); font-size: 44px; left: 87.8071vw; top: 81.2949vh; opacity: 0.306161;">filter_vintage</span><span class="material-symbols-outlined absolute" style="color: rgb(176, 0, 122); font-size: 55px; left: 69.6251vw; top: 31.7975vh; opacity: 0.448551;">mood</span><span class="material-symbols-outlined absolute" style="color: rgb(190, 241, 0); font-size: 21px; left: 25.1155vw; top: 26.8064vh; opacity: 0.340719;">mood</span></div>
+<script>
+        // Simple atmosphere effect with floating smileys/flowers
+        const atmosphere = document.getElementById('atmosphere');
+        const icons = ['mood', 'local_florist', 'filter_vintage', 'star'];
+        const colors = ['#b0007a', '#bef100', '#4d569d'];
+
+        for(let i = 0; i < 15; i++) {
+            const span = document.createElement('span');
+            span.className = 'material-symbols-outlined absolute';
+            span.innerText = icons[Math.floor(Math.random() * icons.length)];
+            span.style.color = colors[Math.floor(Math.random() * colors.length)];
+            span.style.fontSize = Math.floor(Math.random() * 40 + 20) + 'px';
+            span.style.left = Math.random() * 100 + 'vw';
+            span.style.top = Math.random() * 100 + 'vh';
+            span.style.opacity = Math.random() * 0.5 + 0.1;
+            
+            // Basic animation
+            const duration = Math.random() * 20 + 20;
+            span.animate([
+                { transform: 'translate(0, 0) rotate(0deg)' },
+                { transform: `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) rotate(360deg)` }
+            ], {
+                duration: duration * 1000,
+                iterations: Infinity,
+                direction: 'alternate',
+                easing: 'ease-in-out'
+            });
+
+            atmosphere.appendChild(span);
+        }
+    </script>
+
+
+</body></html>
